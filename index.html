@@ -18,8 +18,13 @@
     <!--Шапка сайта-->
     <header class="page-header">
         <div class="container page-header__container">
+            <a href="./index.html" class="logo"><span class="logo__text">Web</span>Studio</a>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-icon">
+                    <use href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg>
+            </button>
             <nav class="site-nav">
-                <a href="./index.html" class="logo"><span class="logo__text">Web</span>Studio</a>
                 <ul class="site-nav__list list">
                     <li class="site-nav__item"><a class="site-nav__link site-nav__link--active link"
                             href="./index.html">Студия</a>
@@ -48,6 +53,40 @@
                 </li>
             </ul>
         </div>
+        <!-- <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-icon">
+                    <use href="./images/symbol-defs.svg#icon-menu_close"></use>
+                </svg>
+            </button>
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--active "
+                        href="./index.html">Студия</a>
+                </li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link " href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link " href="">Контакты</a></li>
+            </ul>
+            </nav>
+            <ul class="mobile-contact__list">
+                <li class="mobile-contact__item">
+                    <a class="mobile-contact__link mobile-contact__link--accent " href="tel:+380961111111">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="mobile-contact__item">
+                    <a class="mobile-contact__link " href="mailto:info@devstudio.com">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile-social__list">
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link">Instagram</a></li>
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link">Twitter</a></li>
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link">Facebook</a></li>
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link">LinkedIn</a></li>
+            </ul>
+        </div> -->
     </header>
     <!--Основной контент-->
     <main>
@@ -341,7 +380,7 @@
             </div>
         </section>
     </main>
-    <!--Подвал сайта-->
+    <!-- Подвал сайта -->
     <footer class="page-footer">
         <div class="container page-footer__container">
             <div class="address-container">
