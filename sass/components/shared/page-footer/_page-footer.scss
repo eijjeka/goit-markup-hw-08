@@ -1,17 +1,24 @@
 .page-footer {
-  // padding-top: 60px;
-  // padding-bottom: 60px;
+  @extend %section;
 
   background-color: $primary-bg-color;
 }
 
 .page-footer__container {
-  // display: flex;
-  // align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__social {
-  // margin-left: 70px;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer__title {
@@ -24,4 +31,8 @@
   text-transform: uppercase;
 
   color: $third-color-text;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
 }

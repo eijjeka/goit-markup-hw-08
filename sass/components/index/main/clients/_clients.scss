@@ -40,6 +40,11 @@
     border-color: $accent-color;
     color: $accent-color;
   }
+
+  @media screen and (max-width: 480px) {
+    width: 210px;
+    height: 92px;
+  }
 }
 
 .clients-list__icon {
