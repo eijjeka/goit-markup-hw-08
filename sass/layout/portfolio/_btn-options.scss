@@ -9,10 +9,9 @@
 .list-btn {
   @extend %list;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 
-  @media screen and (max-width: 480px) {
-    flex-wrap: wrap;
+  @media screen and (min-width: 480px) {
     justify-content: start;
     margin-bottom: 25px;
   }
@@ -28,9 +27,7 @@
 
 .list-btn__item {
   margin-left: 8px;
-  @media screen and (max-width: 480px) {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 15px;
 }
 
 .list-btn__option {
