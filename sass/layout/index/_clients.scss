@@ -1,34 +1,54 @@
 .clients {
-  @extend %section;
+  @media screen and (max-width: 1199px) {
+    @include section(60px, 60px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
 }
 
 .clients__title {
   @extend %title;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }
 
 .clients-list {
   @extend %list;
-  display: flex;
-  margin: -15px;
 
   @media screen and (max-width: 480px) {
-    flex-wrap: wrap;
+    @include list(wrap, 15px, 15px);
     justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include list(wrap, 15px, 15px);
+  }
+  @media screen and (min-width: 1200px) {
+    @include list(wrap, 30px, 30px);
   }
 }
 
 .clients-list__item {
-  margin: 15px;
+  @media screen and (max-width: 480px) {
+    @include item(15px, 15px, 2, 15px);
+  }
+
+  @media screen and (min-width: 768px) {
+    @include item(15px, 15px, 3, 15px);
+  }
+  @media screen and (min-width: 1200px) {
+    @include item(30px, 30px, 6, 30px);
+  }
 }
 
 .clients-list__link {
-  color: $primary-icon-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
+  @include flex(flex, center, center, null, null);
   height: 94px;
 
+  color: $primary-icon-color;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
@@ -39,11 +59,6 @@
   &:focus {
     border-color: $accent-color;
     color: $accent-color;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 210px;
-    height: 92px;
   }
 }
 

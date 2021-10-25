@@ -1,21 +1,21 @@
 // page header
-@import url(./page-header/_page-header);
-@import url(./page-header/_logo);
-@import url(./page-header/_site-nav);
-@import url(./page-header/_contact-list);
+@import './page-header/page-header';
+@import './page-header/logo';
+@import './page-header/site-nav';
+@import './page-header/contact-list';
 
 // page footer
-@import url(./page-footer/_page-footer);
-@import url(./page-footer/_address-block);
-@import url(./page-footer/_form-footer);
+@import './page-footer/page-footer';
+@import './page-footer/address-block';
+@import './page-footer/form-footer';
 
 // index.html
-@import url(./index/_page-hero);
-@import url(./index/_advantage);
-@import url(./index/_work);
-@import url(./index/_team);
-@import url(./index/_clients);
+@import './index/page-hero';
+@import './index/advantage';
+@import './index/work';
+@import './index/team';
+@import './index/clients';
 
 // portfolio.html
-@import url(./portfolio/_btn-options);
-@import url(./portfolio/_cards);
+@import './portfolio/btn-options';
+@import './portfolio/cards';

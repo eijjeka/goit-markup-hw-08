@@ -1,10 +1,17 @@
 .form-footer {
-  margin-left: auto;
-  @media screen and (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media screen and (max-width: 767px) {
     width: 100%;
+    @include flex(flex, center, center, column, null);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include flex(flex, center, center, column, null);
+    width: 450px;
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
   }
 }
 
@@ -12,6 +19,7 @@
   height: 50px;
   padding: 15px 16px;
   line-height: 1.25;
+  width: 100%;
 
   color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
@@ -19,8 +27,7 @@
   box-sizing: border-box;
   border-radius: 4px;
 
-  @media screen and (max-width: 480px) {
-    width: 100%;
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
 

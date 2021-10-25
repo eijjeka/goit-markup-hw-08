@@ -22,22 +22,23 @@
 }
 
 .modal {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   padding: 40px;
+  width: 90%;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: #fff;
 
-  // transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (max-width: 480px) {
-    position: relative;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
   }
 }
 
@@ -94,10 +95,7 @@
   position: relative;
   margin-bottom: 10px;
 
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: $secondary-color-text;
+  @include font(null, 12px, null, 1.16, 0.01em, $secondary-color-text);
 
   &:focus-within .modal__input,
   &:hover,
@@ -165,17 +163,12 @@
 }
 
 .checkbox__label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, center, center, null, null);
   margin-bottom: 30px;
-
-  font-size: 14px;
-  line-height: 1.71;
-  color: $secondary-color-text;
+  @include font(null, 14px, null, 1.71, null, $secondary-color-text);
   cursor: pointer;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     font-size: 12px;
     line-height: 14px;
   }
@@ -185,12 +178,10 @@
   width: 16px;
   height: 15px;
   margin-right: 4px;
-
   border: 2px solid $primary-color-text;
   border-radius: 3px;
-
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-repeat: no-repeat;
+  @include transition(null, border-color, background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
 
   @media screen and (max-width: 375px) {
     height: 11px;
@@ -214,7 +205,7 @@
 
   color: $accent-color;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     font-size: 12px;
     line-height: 14px;
   }
@@ -225,14 +216,8 @@
   width: 200px;
   height: 50px;
   margin: 0 auto;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-
+  @include font(null, 16px, 700, 1.87, 0.06em, $third-color-text);
   background: $accent-color;
-  color: $third-color-text;
   border-radius: 4px;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

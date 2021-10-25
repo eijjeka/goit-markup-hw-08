@@ -1,13 +1,11 @@
 .page-footer {
-  @extend %section;
-
   background-color: $primary-bg-color;
+  @include section(60px, 60px);
 }
 
 .page-footer__container {
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: baseline;
+  @media screen and (min-width: 768px) {
+    @include flex(flex, baseline, center, null, wrap);
   }
 }
 

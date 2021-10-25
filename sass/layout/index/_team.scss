@@ -1,15 +1,24 @@
 .persons {
   @extend %section;
   background-color: $section-bg;
+
+  @media screen and (max-width: 1199px) {
+    @include section(60px, 60px);
+  }
 }
 
 .persons__title {
   @extend %title;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 }
 
 .persons-list {
   @extend %list;
-  // display: flex;
+  @media screen and (min-width: 768px) {
+    @include list(wrap, 30px, 30px);
+  }
 }
 
 .persons-list__item {
@@ -18,23 +27,22 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include item(30px, 30px, 2, 30px);
+  }
+
   @media screen and (min-width: 1200px) {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    @include item(30px, 30px, 4, 30px);
   }
 }
 
 .person-meta {
   height: 168px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (max-width: 480px) {
-    margin-bottom: 30px;
-  }
+  @include flex(flex, center, center, column, null);
 
   @media screen and (min-width: 1200px) {
     max-width: 270px;

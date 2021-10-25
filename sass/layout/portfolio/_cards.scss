@@ -1,15 +1,18 @@
 .cards-list {
   @extend %list;
-  // display: flex;
-  // flex-wrap: wrap;
-  margin-bottom: -30px;
-  margin-right: -30px;
+  @include list(wrap, 30px, 30px);
 }
 
 .cards-list__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  @include item(30px, 30px, 3, 30px);
+
+  @media screen and (min-width: 768px) {
+    @include item(30px, 30px, 2, 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include item(30px, 30px, 3, 30px);
+  }
 }
 
 .cards-list__link {
@@ -59,15 +62,12 @@
 }
 
 .card-meta__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: $primary-color-text;
+  @include font(null, 18px, 700, 2, 0.06em, $primary-color-text);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 17px;
+  }
 }
 
 .card-meta__text {
-  font-size: 16px;
-  line-height: 1.87;
-  color: $secondary-color-text;
+  @include font(null, 16px, null, 1.87, null, $secondary-color-text);
 }
