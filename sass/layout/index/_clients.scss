@@ -17,11 +17,7 @@
 
 .clients-list {
   @extend %list;
-
-  @media screen and (max-width: 480px) {
-    @include list(wrap, 15px, 15px);
-    justify-content: center;
-  }
+  @include list(wrap, 15px, 15px);
 
   @media screen and (min-width: 768px) {
     @include list(wrap, 15px, 15px);
@@ -32,7 +28,7 @@
 }
 
 .clients-list__item {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     @include item(15px, 15px, 2, 15px);
   }
 
