@@ -1,10 +1,14 @@
 .cards-list {
   @extend %list;
-  @include list(wrap, 30px, 30px);
+  @media screen and (min-width: 768px) {
+    @include list(wrap, 30px, 30px);
+  }
 }
 
 .cards-list__item {
-  @include item(30px, 30px, 3, 30px);
+  @media screen and(max-width: 767px) {
+    margin-bottom: 30px;
+  }
 
   @media screen and (min-width: 768px) {
     @include item(30px, 30px, 2, 30px);
