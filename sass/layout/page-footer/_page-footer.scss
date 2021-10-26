@@ -10,7 +10,7 @@
 }
 
 .footer__social {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
 
@@ -30,7 +30,7 @@
 
   color: $third-color-text;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 }
