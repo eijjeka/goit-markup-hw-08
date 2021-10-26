@@ -6,9 +6,10 @@
 }
 
 .cards-list__item {
-  @media screen and(max-width: 767px) {
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px;
+  // @media screen and(max-width: 767px) {
+  //   margin-bottom: 30px;
+  // }
 
   @media screen and (min-width: 768px) {
     @include item(30px, 30px, 2, 30px);
