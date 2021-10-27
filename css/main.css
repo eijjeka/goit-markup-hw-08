@@ -556,6 +556,12 @@ summary {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 480px) {
+  .modal {
+    padding: 20px;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
@@ -603,11 +609,21 @@ summary {
 
 .modal__title {
   margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
   text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
   color: #212121;
+}
+
+@media screen and (max-width: 480px) {
+  .modal__title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #212121;
+    margin-bottom: 0;
+  }
 }
 
 .modal__form {
@@ -727,7 +743,7 @@ summary {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .checkbox__label {
     font-size: 12px;
     line-height: 14px;
@@ -749,12 +765,6 @@ summary {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 375px) {
-  .checkbox__icon {
-    height: 11px;
-  }
-}
-
 .checkbox:checked + .checkbox__icon {
   border-color: #2196f3;
   background-color: #2196f3;
@@ -772,7 +782,7 @@ summary {
   color: #2196f3;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .checkbox__link {
     font-size: 12px;
     line-height: 14px;
@@ -1321,7 +1331,7 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .page-hero {
-    height: 800px;
+    height: 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop/header.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/header.jpg");
     background-size: cover;
