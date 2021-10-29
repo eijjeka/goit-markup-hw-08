@@ -541,6 +541,8 @@ summary {
   top: 50%;
   left: 50%;
   padding: 40px;
+  width: 100%;
+  overflow-y: scroll;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -553,17 +555,22 @@ summary {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 80%;
+    height: 68%;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    max-width: 100%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    max-width: 100%;
   }
 }
 
@@ -585,13 +592,6 @@ summary {
   color: #2196f3;
 }
 
-@media screen and (max-width: 479px) {
-  .modal__btn {
-    width: 25px;
-    height: 30px;
-  }
-}
-
 .modal__icon--close {
   width: 11px;
   height: 11px;
@@ -607,12 +607,6 @@ summary {
   font-weight: 700;
   line-height: 1.15;
   color: #212121;
-}
-
-@media screen and (max-width: 479px) {
-  .modal__title {
-    font-size: 16px;
-  }
 }
 
 .modal__form {
@@ -653,12 +647,6 @@ summary {
   outline: none;
 }
 
-@media screen and (max-width: 479px) {
-  .modal__input {
-    height: 30px;
-  }
-}
-
 .modal__icon {
   position: absolute;
   top: 27px;
@@ -668,21 +656,8 @@ summary {
   cursor: pointer;
 }
 
-@media screen and (max-width: 479px) {
-  .modal__icon {
-    top: 23px;
-    left: 10px;
-  }
-}
-
 .textarea__container {
   margin-bottom: 20px;
-}
-
-@media screen and (max-width: 479px) {
-  .textarea__container {
-    margin-bottom: 11px;
-  }
 }
 
 .textarea {
@@ -696,12 +671,6 @@ summary {
           box-sizing: border-box;
   border-radius: 4px;
   outline: none;
-}
-
-@media screen and (max-width: 479px) {
-  .textarea {
-    height: 53px;
-  }
 }
 
 .textarea::-webkit-input-placeholder {
@@ -747,12 +716,6 @@ summary {
   line-height: 1.71;
   color: #757575;
   cursor: pointer;
-}
-
-@media screen and (max-width: 479px) {
-  .checkbox__label {
-    margin-bottom: 10px;
-  }
 }
 
 .checkbox__icon {
@@ -809,6 +772,12 @@ summary {
 .modal__button--submit:hover, .modal__button--submit:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 479px) {
+  .modal__button--submit {
+    width: 150px;
+  }
 }
 
 .social-list {
