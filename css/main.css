@@ -741,15 +741,7 @@ summary {
 }
 
 .checkbox__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: inline-block;
   margin-bottom: 30px;
   font-size: 12px;
   line-height: 1.71;
@@ -764,6 +756,7 @@ summary {
 }
 
 .checkbox__icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 4px;
@@ -787,6 +780,7 @@ summary {
 }
 
 .checkbox__link {
+  display: inline-block;
   margin-left: 1px;
   font-size: 12px;
   line-height: 1.71;
@@ -835,7 +829,7 @@ summary {
 }
 
 .social-list__link {
-  color: #afb1b8;
+  color: #ffffff;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -1058,8 +1052,6 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 21px;
-    padding-bottom: 21px;
   }
 }
 
@@ -1068,8 +1060,6 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -1103,6 +1093,25 @@ ul {
 
 .contact-list__link:hover, .contact-list__link:focus {
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link--top {
+    padding-top: 21px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link--bottom {
+    padding-bottom: 21px;
+  }
 }
 
 .contact-list__icon {
@@ -1296,6 +1305,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
+  max-width: 1600px;
   background-color: #2f303a;
   height: 400px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/header.jpg");
@@ -1766,15 +1777,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .list-btn {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    margin-bottom: 15px;
   }
 }
 
@@ -1791,8 +1806,13 @@ ul {
 }
 
 .list-btn__item {
-  margin-left: 8px;
-  margin-bottom: 15px;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .list-btn__item {
+    margin-bottom: 15px;
+  }
 }
 
 .list-btn__option {
@@ -1824,20 +1844,22 @@ ul {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 768px) {
+.cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
   .cards-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    margin-top: 40px;
   }
 }
 
 .cards-list__item {
-  margin-bottom: 30px;
+  margin-right: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1859,7 +1881,6 @@ ul {
 }
 
 .cards-list__link {
-  display: inline-block;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1875,6 +1896,12 @@ ul {
 .cards-list__link:focus .card-overlay__text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (max-width: 767px) {
+  .cards-list__link {
+    margin-bottom: 30px;
+  }
 }
 
 .card-overlay {
@@ -1917,7 +1944,7 @@ ul {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .card-meta__title {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
