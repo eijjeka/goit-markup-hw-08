@@ -2,15 +2,16 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 767px) {
-    margin-top: 40px;
-  }
   @media screen and (min-width: 768px) {
+    @include list(null, 30px, 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include list(null, 30px, 30px);
   }
 }
 
 .cards-list__item {
-  margin-right: 30px;
   @media screen and (min-width: 768px) {
     @include item(30px, 30px, 2, 30px);
   }
@@ -43,6 +44,10 @@
 .card-overlay {
   position: relative;
   overflow: hidden;
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
 
 .card-overlay__text {

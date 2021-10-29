@@ -1805,7 +1805,7 @@ ul {
   }
 }
 
-.list-btn__item {
+.list-btn__item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -1852,14 +1852,24 @@ ul {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .cards-list {
-    margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
   }
 }
 
-.cards-list__item {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .cards-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1907,6 +1917,12 @@ ul {
 .card-overlay {
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-overlay {
+    width: 370px;
+  }
 }
 
 .card-overlay__text {
