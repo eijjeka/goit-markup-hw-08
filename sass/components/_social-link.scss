@@ -8,12 +8,8 @@
   }
 }
 
-.social-list__link--bg {
-  background: rgba(255, 255, 255, 0.1);
-}
-
 .social-list__link {
-  color: $third-color-text;
+  color: $primary-icon-color;
   width: 44px;
   height: 44px;
   display: flex;
@@ -30,6 +26,11 @@
     background-color: $accent-color;
     color: $third-color-text;
   }
+}
+
+.social-list__link--bg {
+  background: rgba(255, 255, 255, 0.1);
+  color: $third-color-text;
 }
 
 .social-list__icon {

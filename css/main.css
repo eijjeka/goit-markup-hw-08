@@ -793,12 +793,8 @@ summary {
   margin-right: 10px;
 }
 
-.social-list__link--bg {
-  background: rgba(255, 255, 255, 0.1);
-}
-
 .social-list__link {
-  color: #ffffff;
+  color: #afb1b8;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -817,6 +813,11 @@ summary {
 
 .social-list__link:hover, .social-list__link:focus, .social-list__link--current {
   background-color: #2196f3;
+  color: #ffffff;
+}
+
+.social-list__link--bg {
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
