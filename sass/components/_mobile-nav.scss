@@ -55,13 +55,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 796px;
+  height: 100%;
 
   @media screen and (max-width: 479px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 520px;
   }
 }
 
@@ -112,7 +111,7 @@
   margin-bottom: 64px;
 
   @media screen and (max-width: 479px) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
