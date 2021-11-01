@@ -13,7 +13,6 @@
 
 .cards-list__item {
   @media screen and (min-width: 768px) {
-    height: 404px;
     @include item(30px, 30px, 2, 30px);
   }
 

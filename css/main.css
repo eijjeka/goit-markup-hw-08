@@ -1874,7 +1874,6 @@ ul {
 
 @media screen and (min-width: 768px) {
   .cards-list__item {
-    height: 404px;
     margin-left: 30px;
     margin-top: 30px;
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
