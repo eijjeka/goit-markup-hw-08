@@ -13,6 +13,7 @@
 
 .cards-list__item {
   @media screen and (min-width: 768px) {
+    height: 404px;
     @include item(30px, 30px, 2, 30px);
   }
 
@@ -77,6 +78,7 @@
 
 .card-meta__title {
   @include font(null, 18px, 700, 2, 0.06em, $primary-color-text);
+  margin-bottom: 4px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 18px;
   }
