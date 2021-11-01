@@ -14,6 +14,10 @@
 .cards-list__item {
   @media screen and (min-width: 768px) {
     @include item(30px, 30px, 2, 30px);
+
+    &:first-child .card-meta {
+      height: 146px;
+    }
   }
 
   @media screen and (min-width: 1200px) {

@@ -1871,6 +1871,9 @@ ul {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
   }
+  .cards-list__item:first-child .card-meta {
+    height: 146px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
