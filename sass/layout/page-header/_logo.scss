@@ -11,6 +11,8 @@
 
   @media screen and (min-width: 768px) {
     @include font(Raleway, 24px, 700, 1.16, null, inherit);
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 
   @media screen and (min-width: 1200px) {

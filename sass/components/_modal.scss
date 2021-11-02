@@ -37,7 +37,6 @@
 
   @media screen and (max-width: 479px) {
     width: 80%;
-    height: 68%;
   }
 
   @media screen and (min-width: 480px) {
@@ -162,14 +161,12 @@
   margin-bottom: 30px;
   @include font(null, 12px, null, 1.71, null, $secondary-color-text);
   cursor: pointer;
-
-  // @media screen and (max-width: 479px) {
-  //   margin-bottom: 10px;
-  // }
+  text-align: center;
 }
 
 .checkbox__icon {
   display: inline-block;
+  vertical-align: middle;
   width: 16px;
   height: 15px;
   margin-right: 4px;
