@@ -1974,6 +1974,13 @@ ul {
   padding: 20px 24px;
 }
 
+@media screen and (max-width: 767px) {
+  .card-meta {
+    border: 1px solid #eeeeee;
+    border-top: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .card-meta {
     border: 1px solid #eeeeee;
